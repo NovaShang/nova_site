@@ -1,0 +1,13 @@
+from __future__ import unicode_literals
+
+from django.db import models
+
+# Create your models here.
+
+class Task (models.Model):
+    name = models.CharField(max_length = 255)
+    done = models.BooleanField (default = False)
+    description = models.TextField()
+    deadline = models.DateField()
+    create_time = models.DateTimeField()
+    finish_time = models.DateTimeField()

@@ -1,0 +1,54 @@
+{% extends "two-columns.html" %} 
+{% block head %} 
+<script src="/static/js/angular.min.js"></script>
+<script src="/static/js/ncal.js"></script>
+{% endblock %} {% block maincol %}
+<div class="page-header">
+    <h1>nCal</h1>
+</div>
+<div>
+    <div class="input-group">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-calendar"/>10-11</button>
+        </span>
+        </span>
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+            <button class="btn btn-success" type="button"><span class="glyphicon glyphicon-plus"/></button>
+        </span>
+    </div>
+
+    <p/>
+
+    <div class="list-group">
+        <a href="#" class="list-group-item">
+            <button type="button" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-ok"/> 未完成</button>&nbsp;&nbsp;&nbsp;aasdf
+
+            <button type="button" class="btn btn-sm btn-danger pull-right"><span class="glyphicon glyphicon-remove"/></button>
+
+        </a>
+        <a href="#" class="list-group-item">
+            <button type="button" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-ok"/> 未完成</button>&nbsp;&nbsp;&nbsp;aasdf
+
+            <button type="button" class="btn btn-sm btn-danger pull-right"><span class="glyphicon glyphicon-remove"/></button>
+
+        </a>
+        <a href="#" class="list-group-item">
+            <button type="button" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-ok"/> 未完成</button>&nbsp;&nbsp;&nbsp;aasdf
+
+            <button type="button" class="btn btn-sm btn-danger pull-right"><span class="glyphicon glyphicon-remove"/></button>
+
+        </a>
+        <a href="#" class="list-group-item">
+            <button type="button" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-ok"/> 未完成</button>&nbsp;&nbsp;&nbsp;aasdf
+
+            <button type="button" class="btn btn-sm btn-danger pull-right"><span class="glyphicon glyphicon-remove"/></button>
+
+        </a>
+    </div>
+
+
+</div>
+
+
+{% endblock %}

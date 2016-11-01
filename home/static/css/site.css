@@ -1,0 +1,59 @@
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar-brand {
+    padding: 0 0 0 0;
+}
+
+.navbar-brandlogo>svg {
+    width: 150px;
+    height: 50px;
+}
+
+.navbar-brandlogo>svg path {
+    fill: #FFFFFF;
+}
+
+body {
+    background: #FFFFFF
+}
+
+footer {
+    background: #EEEEEE
+}
+
+html {
+    background: #EEEEEE
+}
+
+.footer-icon>svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+.footer-icon>svg path {
+    fill: #828282;
+}
+
+.footer-description {
+    color: #828282;
+}
+
+.right-column {
+    padding-top: 50px;
+}
+
+.footer-col {
+    padding-bottom: 50px;
+}
+
+@media (max-width:767) {
+    .right-column {
+        visibility: hidden;
+    }
+    .main-column {
+        width: 100%;
+    }
+}
