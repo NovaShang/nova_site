@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block title %}创建VR项目{% endblock %}{% block head %}
+<script src="/static/js/guid.js"></script>
+<script src="/static/js/base64.js"></script>
+<script src="/static/js/createvr.js"></script>{% endblock %} {% block content %}
+
+<div class="col-xs-12 col-sm-6">
+    <legend>创建我的VR</legend>
+
+    <div class="form-group">
+        <label for="">项目名称</label>
+        <input type="text" class="form-control" id="name" placeholder="项目名称">
+        <hr/>
+
+
+        <label for="select-file">选择文件</label>
+        <input type="file" id="select-file" />
+
+    </div>
+
+
+    <h3 id="current-status"></h3>
+    <hr/>
+
+    <button type="submit" class="btn btn-primary" id="start-button">开始上传</button>
+
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "two-columns.html" %} {% block title %}ezVR 模型列表{% endblock %}{% block maincol %} {% for vrmodel in vrmodels %}
+
+<ul class="list-group">
+
+    <li class="list-group-item"><a href="/ezvr/modelviewer/{{vrmodel.pk}}">{{vrmodel.name}}</a></li>
+    </a>
+</ul>
+
+{% endfor %} {% endblock %} {% block rightcol %}
+
+
+<a href="/ezvr/create"><button type="button" class="btn btn-large btn-block btn-primary">创建新VR</button>
+
+
+{% endblock %}

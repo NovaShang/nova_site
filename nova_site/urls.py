@@ -17,6 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from rest_framework import routers
 import nova_calendar.views
+import ezvr.views
 import blog.views
 import home.views
 
@@ -35,6 +36,16 @@ urlpatterns = [
     url(r'^blog/$',blog.views.blog_index),
     url(r'^blog/tag/([0-9]+)',blog.views.tag),
     url(r'^blog/search',blog.views.search),
-    url(r'ncal/', nova_calendar.views.home),
-    url(r'^api-auth/', include('rest_framework.urls'))
+    url(r'^ncal/', nova_calendar.views.home),
+    url(r'^ezvr/$',ezvr.views.home),
+    url(r'^ezvr/mymodels/$',ezvr.views.modellist),
+    url(r'^ezvr/sharedmodels/$',ezvr.views.sharelist),
+    url(r'^ezvr/publicmodels/$',ezvr.views.home),
+    url(r'^ezvr/modelviewer/([0-9]+)$',ezvr.views.modelviewer),
+    url(r'^ezvr/create/$',ezvr.views.create),
+    url(r'^ezvr/vrviewer/([0-9]+)$',ezvr.views.vrviewer),
+    url(r'^ezvr/gettoken$',ezvr.views.get_public_token),
+    url(r'^ezvr/addvrmodel/$',ezvr.views.add_new_vrmodel),
+    url(r'^api-auth/', include('rest_framework.urls')),
+    url(r'^qrcode/(.+)$', ezvr.views.generate_qrcode),
 ]

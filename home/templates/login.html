@@ -9,13 +9,13 @@
     <div class="form-group">
         <label for="username" class="col-sm-2 control-label">用户名</label>
         <div class="col-sm-6">
-            <input type="text" name="username" class="form-control" value="{{username}}" required="required" pattern="" title="">
+            <input type="text" name="username" class="form-control" value="{{username}}">
         </div>
     </div>
     <div class="form-group {% if password_error %}has-error{% endif %}">
         <label for="password" class="col-sm-2 control-label">密码</label>
         <div class="col-sm-6">
-            <input type="password" name="password" class="form-control has-error" value="" required="required" pattern="" title=""> {% if password_error %}
+            <input type="password" name="password" class="form-control" > {% if password_error %}
             <span class="help-block">用户名不存在或密码错误</span> {% endif %}
         </div>
     </div>
