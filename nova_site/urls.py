@@ -18,7 +18,7 @@ from django.contrib import admin
 import ezvr.views
 import blog.views
 import home.views
-
+import ncal.views
 
 urlpatterns = [
     # home page url
@@ -37,6 +37,11 @@ urlpatterns = [
     url(r'^blog/tag/([0-9]+)',blog.views.tag),
     url(r'^blog/search',blog.views.search),
     
+    # nCal urls
+    url(r'ncal/$',ncal.views.index),
+    url(r'ncal/addtask',ncal.views.add_task),
+
+
     # ezVR urls
     url(r'^ezvr/$',ezvr.views.home),
     url(r'^ezvr/mymodels/$',ezvr.views.modellist),

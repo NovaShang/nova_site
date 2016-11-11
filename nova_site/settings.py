@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'about',
     'blog',
     'home',
-    'ezvr'
+    'ezvr',
+    'ncal'
 )
 
 MIDDLEWARE_CLASSES = (
