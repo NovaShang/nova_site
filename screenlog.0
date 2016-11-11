@@ -3,3 +3,244 @@ Not Found: /http:/www.baidu.com/cache/global/img/gs.gif
 [11/Nov/2016 16:16:44] [33m"GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1727[0m
 Not Found: /phpmyadmin/index.php
 [11/Nov/2016 16:28:15] [33m"HEAD /phpmyadmin/index.php HTTP/1.1" 404 5554[0m
+[11/Nov/2016 16:42:02] [m"GET / HTTP/1.1" 200 21445[0m
+[11/Nov/2016 16:42:03] [m"GET /ezvr/ HTTP/1.1" 200 10993[0m
+[11/Nov/2016 16:42:04] [m"GET /ezvr/mymodels/ HTTP/1.1" 200 11605[0m
+[11/Nov/2016 16:42:06] [m"GET /ezvr/modelviewer/7 HTTP/1.1" 200 11348[0m
+[11/Nov/2016 16:42:06] [m"GET /static/js/modelviewer.js HTTP/1.1" 200 2764[0m
+Not Found: /fvserver/viewer3D.min.js
+[11/Nov/2016 16:42:06] [33m"GET /fvserver/viewer3D.min.js HTTP/1.1" 404 5565[0m
+Not Found: /fvserver/three.min.js
+[11/Nov/2016 16:42:06] [33m"GET /fvserver/three.min.js HTTP/1.1" 404 5556[0m
+[11/Nov/2016 16:42:06] [m"GET /static/css/style.min.css HTTP/1.1" 200 156797[0m
+[11/Nov/2016 16:42:06] [m"GET /qrcode/http://novashang.com/ezvr/vrviewer/7 HTTP/1.1" 200 695[0m
+Internal Server Error: /ezvr/gettoken
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/urllib/request.py", line 1254, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3.5/http/client.py", line 1252, in connect
+    super().connect()
+  File "/usr/lib/python3.5/http/client.py", line 849, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 693, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.5/socket.py", line 732, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/nova_site/ezvr/views.py", line 46, in get_public_token
+    resp=urllib.request.urlopen(req)
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 466, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 484, in _open
+    '_open', req)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 1297, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.5/urllib/request.py", line 1256, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+[11/Nov/2016 16:42:10] [35;1m"GET /ezvr/gettoken HTTP/1.1" 500 17041[0m
+[11/Nov/2016 16:42:15] [m"GET /static/css/site.css HTTP/1.1" 200 683[0m
+[11/Nov/2016 16:42:15] [m"GET /static/css/bootstrap.css HTTP/1.1" 200 146010[0m
+[11/Nov/2016 16:42:15] [m"GET /static/css/site.css HTTP/1.1" 200 683[0m
+[11/Nov/2016 16:42:15] [m"GET /static/css/style.min.css HTTP/1.1" 200 156797[0m
+[11/Nov/2016 16:42:15] [33m"GET /static/css/bootstrap.css.map HTTP/1.1" 404 1675[0m
+[11/Nov/2016 16:42:18] [m"GET /ezvr/modelviewer/7 HTTP/1.1" 200 11348[0m
+[11/Nov/2016 16:42:18] [36m"GET /static/js/jquery.js HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:42:18] [36m"GET /static/js/bootstrap.js HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:42:18] [36m"GET /static/css/bootstrap.css HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:42:18] [36m"GET /static/css/site.css HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:42:18] [36m"GET /static/css/style.min.css HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:42:19] [36m"GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0[0m
+Not Found: /fvserver/three.min.js
+[11/Nov/2016 16:42:19] [33m"GET /fvserver/three.min.js HTTP/1.1" 404 5556[0m
+[11/Nov/2016 16:42:19] [m"GET /qrcode/http://novashang.com/ezvr/vrviewer/7 HTTP/1.1" 200 695[0m
+Not Found: /fvserver/viewer3D.min.js
+[11/Nov/2016 16:42:19] [33m"GET /fvserver/viewer3D.min.js HTTP/1.1" 404 5565[0m
+[11/Nov/2016 16:42:19] [36m"GET /static/js/modelviewer.js HTTP/1.1" 304 0[0m
+Internal Server Error: /ezvr/gettoken
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/urllib/request.py", line 1254, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/usr/lib/python3.5/http/client.py", line 1252, in connect
+    super().connect()
+  File "/usr/lib/python3.5/http/client.py", line 849, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib/python3.5/socket.py", line 693, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.5/socket.py", line 732, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/nova_site/ezvr/views.py", line 46, in get_public_token
+    resp=urllib.request.urlopen(req)
+  File "/usr/lib/python3.5/urllib/request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.5/urllib/request.py", line 466, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.5/urllib/request.py", line 484, in _open
+    '_open', req)
+  File "/usr/lib/python3.5/urllib/request.py", line 444, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.5/urllib/request.py", line 1297, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib/python3.5/urllib/request.py", line 1256, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>
+[11/Nov/2016 16:42:19] [35;1m"GET /ezvr/gettoken HTTP/1.1" 500 17041[0m
+[11/Nov/2016 16:43:06] [m"GET /ezvr/modelviewer/7 HTTP/1.1" 200 11348[0m
+[11/Nov/2016 16:43:06] [36m"GET /static/js/jquery.js HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:43:06] [36m"GET /static/js/bootstrap.js HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:43:06] [36m"GET /static/css/bootstrap.css HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:43:06] [36m"GET /static/css/site.css HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:43:06] [33m"GET /static/css/bootstrap.css.map HTTP/1.1" 404 1675[0m
+[11/Nov/2016 16:43:06] [36m"GET /static/css/style.min.css HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:43:06] [36m"GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0[0m
+Not Found: /fvserver/three.min.js
+[11/Nov/2016 16:43:06] [33m"GET /fvserver/three.min.js HTTP/1.1" 404 5556[0m
+Not Found: /fvserver/viewer3D.min.js
+[11/Nov/2016 16:43:06] [33m"GET /fvserver/viewer3D.min.js HTTP/1.1" 404 5565[0m
+[11/Nov/2016 16:43:06] [m"GET /qrcode/http://novashang.com/ezvr/vrviewer/7 HTTP/1.1" 200 695[0m
+[11/Nov/2016 16:43:06] [36m"GET /static/js/modelviewer.js HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:43:08] [m"GET /ezvr/gettoken HTTP/1.1" 200 90[0m
+Not Found: /fvserver/three.min.js
+[11/Nov/2016 16:43:21] [33m"GET /fvserver/three.min.js HTTP/1.1" 404 5556[0m
+Not Found: /fvserver/three.min.js
+[11/Nov/2016 16:44:59] [33m"GET /fvserver/three.min.js HTTP/1.1" 404 5556[0m
+Not Found: /fvserver/three.min.js
+[11/Nov/2016 16:45:00] [33m"GET /fvserver/three.min.js HTTP/1.1" 404 5556[0m
+Not Found: /fvserver/three.min.js
+[11/Nov/2016 16:45:01] [33m"GET /fvserver/three.min.js HTTP/1.1" 404 5556[0m
+[11/Nov/2016 16:45:03] [m"GET /ezvr/modelviewer/7 HTTP/1.1" 200 11362[0m
+[11/Nov/2016 16:45:03] [36m"GET /static/js/jquery.js HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:45:03] [36m"GET /static/js/bootstrap.js HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:45:03] [36m"GET /static/css/bootstrap.css HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:45:03] [33m"GET /static/css/bootstrap.css.map HTTP/1.1" 404 1675[0m
+[11/Nov/2016 16:45:03] [36m"GET /static/css/site.css HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:45:03] [36m"GET /static/css/style.min.css HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:45:03] [36m"GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:45:03] [m"GET /qrcode/http://novashang.com/ezvr/vrviewer/7 HTTP/1.1" 200 695[0m
+[11/Nov/2016 16:45:04] [m"GET /static/fvserver/three.min.js HTTP/1.1" 200 419838[0m
+[11/Nov/2016 16:45:05] [m"GET /static/fvserver/viewer3D.min.js HTTP/1.1" 200 1563364[0m
+[11/Nov/2016 16:45:05] [36m"GET /static/js/modelviewer.js HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:45:07] [m"GET /ezvr/gettoken HTTP/1.1" 200 90[0m
+[11/Nov/2016 16:45:07] [m"GET /static/fvserver/res/locales/en/allstrings.json HTTP/1.1" 200 27376[0m
+[11/Nov/2016 16:45:07] [m"GET /static/fvserver/res/locales/zh-HANS/allstrings.json HTTP/1.1" 200 26703[0m
+[11/Nov/2016 16:45:07] [m"GET /static/fvserver/lmvworker.min.js HTTP/1.1" 200 168833[0m
+[11/Nov/2016 16:45:08] [m"GET /static/fvserver/res/environments/SharpHighlights_irr.logluv.dds HTTP/1.1" 200 98432[0m
+[11/Nov/2016 16:45:08] [m"GET /static/fvserver/res/environments/SharpHighlights_mipdrop.logluv.dds HTTP/1.1" 200 524408[0m
+[11/Nov/2016 16:45:20] [m"GET /static/fvserver/res/textures/VCedge1.png HTTP/1.1" 200 365[0m
+[11/Nov/2016 16:45:20] [m"GET /static/fvserver/res/textures/VChome.png HTTP/1.1" 200 491[0m
+[11/Nov/2016 16:45:20] [m"GET /static/fvserver/res/textures/VCcontext.png HTTP/1.1" 200 379[0m
+[11/Nov/2016 16:45:20] [m"GET /static/fvserver/res/textures/VCarrows.png HTTP/1.1" 200 1840[0m
+[11/Nov/2016 16:45:20] [m"GET /static/fvserver/res/textures/VChomeS.png HTTP/1.1" 200 502[0m
+[11/Nov/2016 16:45:20] [m"GET /static/fvserver/res/locales/zh-HANS/VCcrossRGBA8small.dds HTTP/1.1" 200 98432[0m
+[11/Nov/2016 16:45:20] [m"GET /static/fvserver/res/textures/VCarrowsS0.png HTTP/1.1" 200 1935[0m
+[11/Nov/2016 16:45:20] [m"GET /static/fvserver/res/textures/VCarrowsS1.png HTTP/1.1" 200 1829[0m
+[11/Nov/2016 16:45:20] [m"GET /static/fvserver/res/textures/VChome.png HTTP/1.1" 200 491[0m
+[11/Nov/2016 16:45:20] [m"GET /static/fvserver/res/textures/VCarrows.png HTTP/1.1" 200 1840[0m
+[11/Nov/2016 16:45:20] [m"GET /static/fvserver/res/textures/VCcontext.png HTTP/1.1" 200 379[0m
+[11/Nov/2016 16:45:20] [m"GET /static/fvserver/res/textures/VCcontextS.png HTTP/1.1" 200 399[0m
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0xb66c3dac>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/management/commands/runserver.py", line 113, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/autoreload.py", line 249, in raise_last_exception
+    six.reraise(*_exception)
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/django/__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.5/dist-packages/django/apps/registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "/usr/local/lib/python3.5/dist-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'web3D'
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 11, 2016 - 16:47:16
+Django version 1.10.1, using settings 'nova_site.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[11/Nov/2016 16:47:17] [m"GET /ezvr/vrviewer/7 HTTP/1.1" 200 1589[0m
+[11/Nov/2016 16:47:17] [m"GET /static/js/debug.js HTTP/1.1" 200 6882[0m
+[11/Nov/2016 16:47:17] [33m"GET /static/css/bootstrap.css.map HTTP/1.1" 404 1675[0m
+[11/Nov/2016 16:47:26] [m"GET /ezvr/gettoken HTTP/1.1" 200 90[0m
+[11/Nov/2016 16:47:39] [36m"GET /static/fvserver/res/textures/VChome.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:39] [36m"GET /static/fvserver/res/textures/VCarrows.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:39] [36m"GET /static/fvserver/res/textures/VCedge1.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:39] [36m"GET /static/fvserver/res/textures/VCcontext.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:39] [36m"GET /static/fvserver/res/textures/VChomeS.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:39] [36m"GET /static/fvserver/res/textures/VCarrowsS0.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:39] [36m"GET /static/fvserver/res/textures/VCarrowsS1.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:39] [36m"GET /static/fvserver/res/textures/VChome.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:39] [36m"GET /static/fvserver/res/textures/VCarrows.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:39] [36m"GET /static/fvserver/res/textures/VCcontext.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:39] [36m"GET /static/fvserver/res/textures/VCcontextS.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:42] [36m"GET /static/fvserver/res/textures/VChome.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:42] [36m"GET /static/fvserver/res/textures/VCcontext.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:42] [36m"GET /static/fvserver/res/textures/VCarrows.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:42] [36m"GET /static/fvserver/res/textures/VCedge1.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:42] [36m"GET /static/fvserver/res/textures/VChomeS.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:42] [36m"GET /static/fvserver/res/textures/VCarrowsS0.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:42] [36m"GET /static/fvserver/res/textures/VCarrowsS1.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:42] [36m"GET /static/fvserver/res/textures/VChome.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:42] [36m"GET /static/fvserver/res/textures/VCarrows.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:42] [36m"GET /static/fvserver/res/textures/VCcontext.png HTTP/1.1" 304 0[0m
+[11/Nov/2016 16:47:42] [36m"GET /static/fvserver/res/textures/VCcontextS.png HTTP/1.1" 304 0[0m

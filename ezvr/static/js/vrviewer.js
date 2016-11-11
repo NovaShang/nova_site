@@ -9,13 +9,24 @@ var _wasFlipped;
 var _baseDir = 0;
 var _upVector;
 var left_ready, right_ready;
-
+var _forward=false;
 $(document).ready(
     function() {
         urn = $("#urn").text();
-        $("#urn").hide();
+      	$("#urn").hide();
         getToken();
-    })
+		var triger=document.getElementById("move-triger");
+		triger.addEventListener('touchstart',function(event){
+			event.preventDefault();
+			_forward=true;}
+		);
+		triger.addEventListener('touchend',function(event){
+			event.preventDefault();
+		_forward=false;
+		});
+		
+		});
+	
 
 function getToken() {
     $.ajax({
@@ -135,24 +146,31 @@ function getAngle(e) {
 }
 
 function setCam() {
-    var ab = Math.abs(_beta);
-    var flipped = (ab < 90 && _gamma < 0) || (ab > 90 && _gamma > 0);
-    var vert = ((flipped ? _gamma : _gamma) + (ab < 90 ? 90 : -90)) * _deg2rad;
+
+    //var ab = Math.abs(_beta);
+    //var flipped = (ab < 90 && _gamma < 0) || (ab > 90 && _gamma > 0);
+    //var ver= ((flipped ? _gamma : _gamma) + (ab < 90 ? 90 : -90)) * _deg2rad;
+var vert;
+	if(_gamma<0){
+		vert=(90+_gamma)*_deg2rad;
+	}else{
+		vert=(_gamma-90)*_deg2rad;
+	}
 
 
     // When the orientation changes, reset the base direction
-    if (_wasFlipped != flipped) {
+    //if (_wasFlipped != flipped) {
         // If the angle goes below/above the horizontal, we don't
         // flip direction (we let it go a bit further)
-        if (Math.abs(_gamma) < 45) {
-            flipped = _wasFlipped;
-        } else {
+      //  if (Math.abs(_gamma) < 45) {
+        //    flipped = _wasFlipped;
+        //} else {
             // Our base direction allows us to make relative horizontal
             // rotations when we rotate left & right
-            _wasFlipped = flipped;
-            _baseDir = _alpha;
-        }
-    }
+          //  _wasFlipped = flipped;
+            //_baseDir = _alpha;
+       // }
+    //}
 
     // alpha is the compass direction the device is
     // facing in degrees. This equates to the
@@ -163,7 +181,9 @@ function setCam() {
     // Save the latest horiz and vert values for use in zoom
     _lastHoriz = horiz;
     _lastVert = vert;
-    orbitViews(vert, horiz);
+    
+	//$("#urn").text("("+vert+","+horiz+","+_gamma+")");
+	orbitViews(vert, horiz);
 
 
 
@@ -173,17 +193,21 @@ function orbitViews(vert, horiz) {
     // We'll rotate our position based on the initial position
     // and the target will stay the same
 
-    // if (vert < 0 && !Autodesk.Viewing.isIOSDevice()) {
-    //     horiz = horiz + Math.PI;
-    // }
+     if (vert > 0 ) {
+         horiz = horiz + Math.PI;
+     }
 
     var pos = vl.navigation.getPosition();
+
 
     var x = Math.cos(horiz);
     var y = Math.sin(horiz);
     var z = Math.tan(vert);
     var dir = new THREE.Vector3(x, y, z);
-    var trg = dir; //pos.clone().add(dir);
+    if(_forward){
+	pos.add(new THREE.Vector3(x/10,y/10,z/10));
+	}
+	var trg = pos.clone().add(dir);
 
     var zAxis = _upVector.clone();
     var axis = trg.clone().sub(pos).normalize();

@@ -19,7 +19,7 @@ def vrviewer(request,modelkey):
     data={
         "vrmodel":VrModel.objects.get(pk=modelkey)
     }
-    return render(request,'debug.html',data)
+    return render(request,'vrviewer.html',data)
 
 def generate_qrcode(request, data):
     img = qrcode.make(data)

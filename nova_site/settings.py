@@ -40,7 +40,6 @@ INSTALLED_APPS = (
     'about',
     'blog',
     'home',
-    'web3D',
     'ezvr',
     'nova_calendar',
     'rest_framework'
