@@ -15,28 +15,29 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from rest_framework import routers
-import nova_calendar.views
 import ezvr.views
 import blog.views
 import home.views
 
-router=routers.DefaultRouter()
-router.register(r'ncal/tasks',nova_calendar.views.TaskViewSet)
 
 urlpatterns = [
+    # home page url
     url(r'^$',home.views.index,name='home'),
+
+    # auth urls
     url(r'^register/$',home.views.register),
     url(r'^regsuccess/$',home.views.reg_success),
     url(r'^login/(.*)$',home.views.login),
     url(r'^logout/$',home.views.logout),
-    url(r'^',include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),
+
+    # blog urls
     url(r'^blog/([0-9]+)',blog.views.blog_article),
     url(r'^blog/$',blog.views.blog_index),
     url(r'^blog/tag/([0-9]+)',blog.views.tag),
     url(r'^blog/search',blog.views.search),
-    url(r'^ncal/', nova_calendar.views.home),
+    
+    # ezVR urls
     url(r'^ezvr/$',ezvr.views.home),
     url(r'^ezvr/mymodels/$',ezvr.views.modellist),
     url(r'^ezvr/sharedmodels/$',ezvr.views.sharelist),
@@ -46,6 +47,7 @@ urlpatterns = [
     url(r'^ezvr/vrviewer/([0-9]+)$',ezvr.views.vrviewer),
     url(r'^ezvr/gettoken$',ezvr.views.get_public_token),
     url(r'^ezvr/addvrmodel/$',ezvr.views.add_new_vrmodel),
-    url(r'^api-auth/', include('rest_framework.urls')),
+
+    # QRCode Generator url
     url(r'^qrcode/(.+)$', ezvr.views.generate_qrcode),
 ]

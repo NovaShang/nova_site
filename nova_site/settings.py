@@ -40,9 +40,7 @@ INSTALLED_APPS = (
     'about',
     'blog',
     'home',
-    'ezvr',
-    'nova_calendar',
-    'rest_framework'
+    'ezvr'
 )
 
 MIDDLEWARE_CLASSES = (
